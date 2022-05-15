@@ -2,10 +2,10 @@
 Search information about GitHub users by name.
 
 <a href="https://github.com/piterxyz/github-user-search">
-    <img src="img/mobile-look-dark.png" alt="Mobile Dark Mode Look">
+    <img width="40%" src="img/mobile-look-dark.png" alt="Mobile Dark Mode Look">
 </a>  
 <a href="https://github.com/piterxyz/github-user-search">
-    <img src="img/mobile-look-light.png" alt="Mobile Light Mode Look">
+    <img width="40%" src="img/mobile-look-light.png" alt="Mobile Light Mode Look">
 </a>
 
 ## Features
