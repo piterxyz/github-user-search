@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" style="--background:#f6f8ff; --background-content:#fefefe; --text:#4b6a9b; --text-alt:#2b3442; --shadow:0px 16px 30px -10px rgba(70, 96, 187, 0.2); --icon-bg:brightness(100%);">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub User Search</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">devfinder</h1>
+            <div id="btn-mode">
+                <p id="mode-text">DARK</p>
+                <div class="icon-container"><img id="mode-icon" src="./img/icon-moon.svg" alt=""></div>
+            </div>
+        </header>
+        <main>
+            <div id="app">
+                <div class="searchbar-container">
+                    <input type="search" name="user-input" id="input" placeholder="Search Github username...">
+                    <div class="error">
+                        <p id="error-message"></p>
+                    </div>
+                    <button class="btn-search" id="submit">Search</button>
+                </div>
+                <div class="profile-container">
+                    <div class="profile-content">
+                        <div class="profile-header">
+                            <img id="avatar" src="./img/default-avatar.png" alt="">
+                            <div class="profile-info-wrapper">
+                                <div class="profile-name">
+                                    <h2 id="name">wasd</h2>
+                                    <p id="user">awsd</p>
+                                </div>
+                                <p id="date">wasd</p>
+                            </div>
+                        </div>
+                        <p id="bio">wasd</p>
+                        <div class="profile-stats-wrapper">
+                            <div class="profile-stat">
+                                <p class="stat-title">Repos</p>
+                                <p id="repos" class="stat-value">1</p>
+                            </div>
+                            <div class="profile-stat">
+                                <p class="stat-title">Followers</p>
+                                <p id="followers" class="stat-value">2</p>
+                            </div>
+                            <div class="profile-stat">
+                                <p class="stat-title">Following</p>
+                                <p id="following" class="stat-value">3</p>
+                            </div>
+                        </div>
+                        <div class="profile-bottom-wrapper">
+                            <div class="profile-info">
+                                <div class="bottom-icons"><img src="./img/icon-location.svg" alt=""></div>
+                                <p id="location">wasd</p>
+                            </div>
+                            <div class="profile-info">
+                                <div class="bottom-icons"><img src="./img/icon-website.svg" alt=""></div>
+                                <p id="page">wasd</p>
+                            </div>
+                            <div class="profile-info">
+                                <div class="bottom-icons"><img src="./img/icon-twitter.svg" alt=""></div>
+                                <p id="twitter">wasd</p>
+                            </div>
+                            <div class="profile-info">
+                                <div class="bottom-icons"><img src="./img/icon-company.svg" alt=""></div>
+                                <p id="company">wasd</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

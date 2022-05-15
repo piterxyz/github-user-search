@@ -1,0 +1,448 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+:root {
+  --background: #f6f8ff;
+  --background-content: #fefefe;
+  --text: #4b6a9b;
+  --text-alt: #2b3442;
+  --shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+  --icon-bg: brightness(100%);
+  --button: #0079ff;
+  --button-hover: #60abff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  background-color: var(--background);
+  font-size: 13px;
+  color: var(--text);
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.container {
+  width: 327px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 36px;
+}
+
+.container .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .header #btn-mode {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90px;
+  letter-spacing: 2.5px;
+  color: var(--text);
+  font-weight: bold;
+}
+
+.container .header #btn-mode:hover {
+  cursor: pointer;
+}
+
+.container #app {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+
+.container #app .searchbar-container {
+  position: relative;
+  background-color: var(--background-content);
+  border-radius: 15px;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  padding: 6px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(../img/icon-search.svg);
+  background-repeat: no-repeat;
+  background-position-x: 24px;
+  background-position-y: center;
+  background-size: 20px;
+}
+
+.container #app .searchbar-container #input {
+  border: none;
+  width: 80%;
+  outline: none;
+  background: none;
+  color: var(--text);
+  padding-left: 50px;
+}
+
+.container #app .searchbar-container #input::-webkit-input-placeholder {
+  color: var(--text);
+  letter-spacing: -0.5px;
+  font-size: 13px;
+}
+
+.container #app .searchbar-container #input:-ms-input-placeholder {
+  color: var(--text);
+  letter-spacing: -0.5px;
+  font-size: 13px;
+}
+
+.container #app .searchbar-container #input::-ms-input-placeholder {
+  color: var(--text);
+  letter-spacing: -0.5px;
+  font-size: 13px;
+}
+
+.container #app .searchbar-container #input::placeholder {
+  color: var(--text);
+  letter-spacing: -0.5px;
+  font-size: 13px;
+}
+
+.container #app .searchbar-container .error {
+  position: absolute;
+  color: red;
+  font-weight: bold;
+  right: 10px;
+  top: -25px;
+}
+
+.container #app .searchbar-container .btn-search {
+  min-width: 84px;
+  padding: 12px 16px;
+  background-color: var(--button);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.container #app .searchbar-container .btn-search:hover {
+  cursor: pointer;
+  background-color: var(--button-hover);
+}
+
+.container #app .profile-container {
+  background-color: var(--background-content);
+  border-radius: 15px;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+.container #app .profile-container .profile-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.container #app .profile-container .profile-content .profile-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.container #app .profile-container .profile-content .profile-header #avatar {
+  width: 70px;
+  border-radius: 90px;
+}
+
+.container #app .profile-container .profile-content .profile-header .profile-info-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container #app .profile-container .profile-content .profile-header .profile-info-wrapper .profile-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container #app .profile-container .profile-content .profile-header .profile-info-wrapper .profile-name #name {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text-alt);
+}
+
+.container #app .profile-container .profile-content .profile-header .profile-info-wrapper .profile-name #user {
+  color: var(--button);
+}
+
+.container #app .profile-container .profile-content .profile-stats-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: var(--background);
+  text-align: center;
+  border-radius: 10px;
+  padding: 18px;
+}
+
+.container #app .profile-container .profile-content .profile-stats-wrapper .profile-stat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  gap: 8px;
+}
+
+.container #app .profile-container .profile-content .profile-stats-wrapper .profile-stat .stat-title {
+  font-size: 11px;
+}
+
+.container #app .profile-container .profile-content .profile-stats-wrapper .profile-stat .stat-value {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text-alt);
+}
+
+.container #app .profile-container .profile-content .profile-bottom-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 16px 0;
+}
+
+.container #app .profile-container .profile-content .profile-bottom-wrapper .profile-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 14px;
+}
+
+.container #app .profile-container .profile-content .profile-bottom-wrapper .profile-info .bottom-icons {
+  width: 20px;
+  -webkit-filter: var(--icon-bg);
+          filter: var(--icon-bg);
+}
+
+.container #app .profile-container .profile-content #bio {
+  line-height: 25px;
+  opacity: 0.75;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 573px;
+  }
+  .container #app {
+    gap: 24px;
+  }
+  .container #app .searchbar-container {
+    padding: 10px;
+  }
+  .container #app .searchbar-container #input {
+    font-size: 18px;
+    width: 75%;
+  }
+  .container #app .searchbar-container #input::-webkit-input-placeholder {
+    font-size: 18px;
+  }
+  .container #app .searchbar-container #input:-ms-input-placeholder {
+    font-size: 18px;
+  }
+  .container #app .searchbar-container #input::-ms-input-placeholder {
+    font-size: 18px;
+  }
+  .container #app .searchbar-container #input::placeholder {
+    font-size: 18px;
+  }
+  .container #app .searchbar-container .error {
+    font-size: 15px;
+    top: -30px;
+  }
+  .container #app .searchbar-container .btn-search {
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+  .container #app .profile-container {
+    padding: 40px;
+  }
+  .container #app .profile-container .profile-content {
+    gap: 30px;
+  }
+  .container #app .profile-container .profile-content .profile-header {
+    margin-bottom: 0;
+  }
+  .container #app .profile-container .profile-content .profile-header #avatar {
+    width: 117px;
+  }
+  .container #app .profile-container .profile-content .profile-header .profile-info-wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container #app .profile-container .profile-content .profile-header .profile-info-wrapper .profile-name #name {
+    font-size: 26px;
+  }
+  .container #app .profile-container .profile-content .profile-header .profile-info-wrapper .profile-name #user {
+    font-size: 16px;
+  }
+  .container #app .profile-container .profile-content .profile-header .profile-info-wrapper #date {
+    font-size: 15px;
+  }
+  .container #app .profile-container .profile-content #bio {
+    font-size: 15px;
+  }
+  .container #app .profile-container .profile-content .profile-stats-wrapper {
+    padding: 18px 32px;
+  }
+  .container #app .profile-container .profile-content .profile-stats-wrapper .profile-stat {
+    text-align: start;
+  }
+  .container #app .profile-container .profile-content .profile-stats-wrapper .profile-stat .stat-title {
+    font-size: 13px;
+  }
+  .container #app .profile-container .profile-content .profile-stats-wrapper .profile-stat .stat-value {
+    font-size: 22px;
+  }
+  .container #app .profile-container .profile-content .profile-bottom-wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .container #app .profile-container .profile-content .profile-bottom-wrapper .profile-info {
+    width: 47.5%;
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 730px;
+  }
+  .container #app .searchbar-container #input {
+    width: 65%;
+  }
+  .container #app .searchbar-container .error {
+    top: 50%;
+    right: 20%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    font-size: 15px;
+  }
+  .container #app .profile-container {
+    position: relative;
+  }
+  .container #app .profile-container .profile-content {
+    width: 480px;
+    margin-left: auto;
+    gap: 16px;
+  }
+  .container #app .profile-container .profile-content .profile-header #avatar {
+    position: absolute;
+    left: 0;
+    margin-left: 40px;
+  }
+  .container #app .profile-container .profile-content .profile-header .profile-info-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+  .container #app .profile-container .profile-content .profile-header .profile-info-wrapper .profile-name {
+    gap: 2px;
+  }
+  .container #app .profile-container .profile-content .profile-header .profile-info-wrapper #date {
+    padding-top: 10px;
+  }
+  .container #app .profile-container .profile-content .profile-stats-wrapper {
+    margin: 20px 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */
